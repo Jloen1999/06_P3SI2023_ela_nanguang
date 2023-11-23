@@ -1,0 +1,22 @@
+# Establecer fichero clave
+& fichero_clave key.dat
+
+# Generar clave AES: tamaño y claveUsuario
+& Genera_Clave 128 AES JoseLuis
+
+# Recuperar clave AES en el fichero clave
+& Carga_Clave AES
+
+# Cifrar: in->texto en claro, out->criptograma
+& ficheroentrada clearTextFile.txt    # Texto claro
+& ficherosalida cryptogramFile.dat    # Criptograma
+@ codifica ON   # Almacenar el criptograma
+& AES ConRelleno      # Almacenar el criptograma en fichero salida
+
+# Descifrar: in->criptograma, out->texto en claro
+& ficheroentrada cryptogramFile.dat    # Criptograma
+& ficherosalida clearTextFile.txt    # texto en claro
+@ codifica OFF
+& AES ConRelleno        # Almacenar el texto en claro en fichero salida
+
+

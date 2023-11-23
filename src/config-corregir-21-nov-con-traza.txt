@@ -1,0 +1,40 @@
+#comienza el fichero de configuracion de P3 SI 2023 para corregir la practica adelantada
+#version 21 de noviembre de 2023
+
+comienza el fichero de configuracion de P3 SI 2023   CON TRAZA
+ @ traza OFF
+& ficheroentrada entrada.txt
+
+
+#probando los comandos
+# comando siguiente debe dar error
+& genera_clave 128 AES    
+& fichero_clave clave_examen.cla
+& genera_clave 192 AES CLAVEDECIENTONOVENTAYDOSYMUCHOMATEXTO
+& carga_clave AES
+& ficheroentrada quijote1.txt
+& ficherosalida criptograma1.dat
+@ codifica ON
+& AES ConRelleno
+& ficheroentrada criptograma1.dat
+& ficherosalida quijote1recuperado.txt
+& carga_clave AES
+@ codifica OFF
+& AES ConRelleno
+
+
+
+
+& fichero_clave claveFuenteJuan.cla
+& carga_clave AES
+& ficheroentrada quijote2.txt
+& ficherosalida criptograma2.dat
+@ codifica ON
+& AES ConRelleno
+& ficheroentrada criptograma2.dat
+& ficherosalida quijote2recuperado.txt
+& carga_clave AES
+@ codifica OFF
+& AES ConRelleno
+
+# fin del fichero de configuracion

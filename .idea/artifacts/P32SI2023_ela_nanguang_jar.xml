@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact name="P32SI2023_ela_nanguang:jar">
+    <output-path>$PROJECT_DIR$/ejecutable</output-path>
+    <root id="root">
+      <element id="archive" name="06_P3SI2023_ela_nanguang.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/ejecutable/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="P32SI2023_ela_nanguang" />
+      </element>
+    </root>
+  </artifact>
+</component>
